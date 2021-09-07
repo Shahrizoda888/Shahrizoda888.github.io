@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat application</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+<style>
+    input{
+        margin-top: 4px;
+    }
+</style>
+</head>
+<body>
+    <div style="display: flex; justify-content: center; align-items: center; height : 100vh">
+        <form method="post" action="{% url 'room' %}">
+            {% csrf_token %}
+            <input class="input is-primary  " style="width:300px; text-align: center;" type="text" placeholder="Enter room no" name="room_no"><br>
+            <input class="input is-primary" style="width:300px; text-align: center;" type="text" placeholder="Enter name" name="name"><br>
+            <div style="display: flex; justify-content: center;">
+                <button class="button is-primary ">Submit</button>
+            </div>
+            
+        </form>
+    </div>
+    
+
+</body>
+</html>
